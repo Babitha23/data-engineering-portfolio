@@ -28,7 +28,7 @@ This repository showcases end-to-end modern data engineering solutions using:
 ## 🏗 Architecture (High-Level)
 
 This portfolio follows the Medallion Architecture:
-(Source) → ADF → Raw (Bronze) → Databricks Transform (Silver) → Business Layer (Gold) → Synapse SQL / BI Layer
+**Project1 - Azure + Databricks End-to-End Data Platform**: (Source) → ADF → Raw (Bronze) → Databricks Transform (Silver) → Business Layer (Gold) → Synapse SQL / BI Layer
 
 A visual diagram will be added once Project 1 reaches completion.
 
@@ -93,7 +93,7 @@ This portfolio is being built over **6–7 weeks** with structured milestones an
 If you’d like to discuss opportunities or give feedback:
 
 - **LinkedIn:** linkedin.com/in/babitha-dharmaraj  
-- **Email:** *(optional — add if you want recruiters to contact you)*
+- **Email:** babithapkv@gmail.com
 
 ---
 
