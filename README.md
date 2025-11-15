@@ -9,7 +9,7 @@ This repository showcases end-to-end modern data engineering solutions using:
 - Azure Synapse Analytics / Databricks SQL
 - dbt for transformation and modeling
 - Python automation with CI/CD using GitHub Actions
-- Streaming (Kafka / Event Hub) *(optional project)*
+- Streaming (Kafka / Event Hub)
 
 ---
 
