@@ -1,5 +1,34 @@
 # UK Energy Intelligence Lakehouse
 
+## Business Use Case
+
+### Purpose: 
+Provide decision-makers with insights into UK energy consumption, production, and pricing trends to support policy, forecasting, and operational efficiency.
+
+---
+
+### Scenario Example:
+- A government energy analyst or utility company wants to:
+- Track energy consumption by sector over time
+- Monitor household energy prices and compare gas vs electricity
+- Understand how production sources contribute to supply
+- Detect trends, anomalies, or seasonal variations for planning
+
+---
+
+### Key Performance Indicators (KPIs)
+| KPI                                 | Description                                                 | Dataset Source                 |
+| ----------------------------------- | ----------------------------------------------------------- | ------------------------------ |
+| Total energy consumption            | Sum of energy consumed by sector                            | ECUK, ET 3.1                   |
+| Energy consumption by sector        | Breakdown by Domestic, Industrial, Transport, Services      | ECUK, ET 3.1                   |
+| Average household electricity price | Average cost per kWh for households                         | ET 5.1                         |
+| Average household gas price         | Average cost per kWh for households                         | ET 5.2                         |
+| Total energy production by source   | Volume of energy produced per type (e.g., Gas, Coal, Solar) | ET 1.1, Historical Electricity |
+| Electricity supply vs demand        | Difference between supply and consumption                   | ET 4.1                         |
+| Renewable energy %                  | Share of renewables in total energy production              | ET 1.1                         |
+
+---
+
 ## 🔍 Overview
 
 This project demonstrates an end-to-end modern data engineering workflow using real UK Government open data related to energy production, pricing, and consumption trends.
