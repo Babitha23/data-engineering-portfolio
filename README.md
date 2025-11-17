@@ -27,10 +27,11 @@ This repository showcases end-to-end modern data engineering solutions using:
 
 ## 🏗 Architecture (High-Level)
 
-This portfolio follows the Medallion Architecture:
-**Project1 - Azure + Databricks End-to-End Data Platform**: (Source) → ADF → Raw (Bronze) → Databricks Transform (Silver) → Business Layer (Gold) → Synapse SQL / BI Layer
+This portfolio follows the Medallion Architecture:<br/><br/>
+**Project01 - Azure + Databricks End-to-End Data Platform**: <br/>
+(Source) → ADF → Raw (Bronze) → Databricks Transform (Silver) → Business Layer (Gold) → Synapse SQL / BI Layer<br/>
 
-A visual diagram will be added once Project 1 reaches completion.
+A visual diagram will be added once Project01 reaches completion.
 
 ---
 
@@ -60,10 +61,12 @@ This repo includes:
 
 Sources used across projects include public real-world datasets such as:
 
-- NYC Taxi Trips
-- OpenWeather API
-- UK Gov Open Data
-- E-commerce transactions dataset
+| Dataset                 | Used For                                         | Type                                    | Frequency |
+| ----------------------- | ------------------------------------------------ | --------------------------------------- | --------- |
+| Historical Electricity  | Trend & baseline consumption                     | Batch                                   | Static    |
+| Energy Trends (Monthly) | Incremental ETL, aggregation, forecasting        | Incremental batch / simulated streaming | Monthly   |
+| ECUK                    | Dimensional model population (sector, fuel type) | Batch                                   | Annual    |
+| NEED                    | Spark scaling, joins, optimization               | Batch                                   | Static    |
 
 Dataset details will be documented per project folder.
 
@@ -71,15 +74,15 @@ Dataset details will be documented per project folder.
 
 ## 🗂 Repository Structure
 
-data-engineering-portfolio/
-│
-├─ 01-azure-databricks-end-to-end-platform/
-├─ 02-databricks-spark-optimization/
-├─ 03-dbt-sql-modeling/
-├─ 04-python-ci-cd-automation/
-├─ 05-streaming-pipeline-databricks-kafka/
-└─ README.md
-
+data-engineering-portfolio/<br/>
+│<br/>
+├─ 01-azure-databricks-end-to-end-platform/<br/>
+├─ 02-databricks-spark-optimization/<br/>
+├─ 03-dbt-sql-modeling/<br/>
+├─ 04-python-ci-cd-automation/<br/>
+├─ 05-streaming-pipeline-databricks-kafka/<br/>
+└─ README.md<br/>
+(This section will keep being updated time to time)
 ---
 
 ## 📅 Timeline
