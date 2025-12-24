@@ -6,16 +6,16 @@ This document captures metadata and definitions for the datasets used in the UK 
 
 ## 1. Dataset Catalog
 
-| Dataset Name | Source | Format | Update Frequency | Notes |
-|--------------|--------|--------|-----------------|-------|
-| Historical Electricity Data | GOV.UK | CSV | Annual | Long-term electricity data, ideal for trend analysis and baseline metrics |
-| UK Energy Consumption (ECUK) | GOV.UK | XLS | Annual | Energy consumption by sector (domestic, industrial, transport, services); good for dimensional modelling |
-| ET 5.1 - Household Electricity Prices | GOV.UK | XLS | Monthly | Time-series pricing dataset for analytical modeling |
-| ET 5.2 - Household Gas Prices | GOV.UK | XLS | Monthly | Complements ET 5.1, useful for comparative metrics |
-| ET 1.1 - Indigenous Energy Production by Source | GOV.UK | XLS | Monthly | Multi-column dataset suitable for sector-level aggregation and joins |
-| ET 3.1 - Final Energy Consumption by Sector | GOV.UK | XLS | Monthly | Ideal for fact/dimension modeling in Bronze → Silver → Gold layers |
-| ET 4.1 - Electricity Supply, Demand, and Trade | GOV.UK | XLS | Monthly | Complex table suitable for Spark transformations and normalization |
-| NEED Dataset (Energy Efficiency) | GOV.UK | CSV / ODS | Occasional | Optional: Large dataset suitable for Spark optimization, joins, partitioning |
+| Dataset Name | Source | Format | Update Frequency | Primary Use Case | Notes |
+|-------------|--------|--------|------------------|------------------|-------|
+| Historical Electricity Data | GOV.UK | CSV | Annual | Long-term trend analysis | Suitable for baseline metrics and historical comparisons |
+| UK Energy Consumption (ECUK) | GOV.UK | XLS | Annual | Sector-level consumption analysis | Energy usage by domestic, industrial, transport, and services sectors |
+| ET 5.1 – Household Electricity Prices | GOV.UK | XLS | Monthly | Price trend analytics | Time-series dataset used in pricing fact tables |
+| ET 5.2 – Household Gas Prices | GOV.UK | XLS | Monthly | Comparative price analytics | Complements ET 5.1 for multi-fuel analysis |
+| ET 1.1 – Indigenous Energy Production by Source | GOV.UK | XLS | Monthly | Energy production analysis | Multi-column dataset suitable for aggregation and joins |
+| ET 3.1 – Final Energy Consumption by Sector | GOV.UK | XLS | Monthly | Fact table generation | Ideal for Bronze → Silver → Gold transformation layers |
+| ET 4.1 – Electricity Supply, Demand, and Trade | GOV.UK | XLS | Monthly | Supply-demand analytics | Complex structure suitable for Spark normalization |
+| NEED Dataset (Energy Efficiency) | GOV.UK | CSV / ODS | Occasional | Performance & optimization showcase | Large dataset used to demonstrate Spark optimization, joins, and partitioning |
 
 ---
 
@@ -85,5 +85,19 @@ This document captures metadata and definitions for the datasets used in the UK 
 | `fact_energy_prices` | `price_value`, `unit` | `dim_time`, `dim_sector`, `dim_energy_type`, `dim_region` | From ET 5.1, ET 5.2 |
 | `fact_energy_production` | `production_amount`, `unit` | `dim_time`, `dim_energy_type`, `dim_region` | From Historical Electricity & ET 1.1 |
 | `fact_energy_supply_trade` | `supply_amount`, `trade_amount`, `unit` | `dim_time`, `dim_energy_type`, `dim_region` | From ET 4.1, normalized for Gold layer |
+
+### Grain Definition
+
+All fact tables are designed at a monthly grain unless otherwise stated.
+Annual datasets are aligned to year-level granularity and mapped to the corresponding time dimension attributes.
+
+---
+
+## 6. Data Lineage (High-Level)
+
+Source datasets are ingested into the Bronze layer in raw form.
+All cleansing, validation, and normalization occur in the Silver layer.
+Only conformed, analytics-ready tables are exposed in the Gold layer
+for downstream consumption via Synapse Serverless and Power BI.
 
 ---

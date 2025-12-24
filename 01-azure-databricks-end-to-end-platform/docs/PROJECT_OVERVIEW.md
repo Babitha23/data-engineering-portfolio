@@ -75,8 +75,11 @@ All datasets are sourced from the UK Government’s open data platform:
 
 ## 🏛️ Architecture
 
-Source Files (Gov.UK) -> Azure Data Factory (Ingestion Scheduling) -> Bronze Layer (Raw Data - ADLS) -> Databricks / PySpark (Cleaning, Standardization) -> Silver Layer (Validated & Structured Data) -> dbt + Delta Lake (Dimensional Modelling & Business Rules) -> Gold Layer (Analytics-Ready Data / Star Schema) -> Power BI / Synapse SQL / Notebooks
-
+Source → ADF → ADLS (Bronze/Silver/Gold)
+       → Databricks (Transform)
+       → Synapse Serverless
+       → Power BI
+	   
 ---
 
 ## 🔧 Technologies Used
