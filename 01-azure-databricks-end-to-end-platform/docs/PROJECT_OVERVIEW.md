@@ -111,8 +111,8 @@ Source → ADF → ADLS (Bronze/Silver/Gold)
 | Stage | Progress |
 |-------|----------|
 | Dataset selection | ✅ Completed |
-| Initial ingestion planning | ⏳ In progress |
-| Pipelines | 🔜 Next |
+| Initial ingestion planning | ✅ Completed |
+| Pipelines | ⏳ In progress|
 | Modelling | 🔜 Later |
 | CI/CD | 🔜 Final |
 
