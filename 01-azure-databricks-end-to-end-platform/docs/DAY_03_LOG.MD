@@ -1,5 +1,5 @@
-Date: 27/12/2025
-Time Spent: ~3-4 hours
+Date: 27/12/2025<br>
+Time Spent: ~3-4 hours<br>
 Day 3 - Silver Layer Transformation (UK Energy Intelligence Lakehouse)
 
 # 🎯 Objective
@@ -25,26 +25,26 @@ Transform raw Energy Trends Excel datasets from the Bronze layer into analytics-
 ## 1. Secure Access to ADLS Gen2 (Non-DBFS)
 - Configured Hadoop-level access to ADLS Gen2 using ABFSS paths
 - Resolved spark-excel authentication issue by explicitly setting Hadoop configuration
-- Validated access using dbutils.fs.ls
+- Validated access using dbutils.fs.ls<br>
 ✔ Enabled secure, mount-less data access aligned with modern Databricks best practices
 
 ## 2. Excel Ingestion Using spark-excel
 - Installed and configured com.crealytics:spark-excel
 - Read full Excel sheet without predefined ranges
-- Avoided hardcoded table positions to support future structural changes
+- Avoided hardcoded table positions to support future structural changes<br>
 ✔ Successfully ingested complex XLSX data directly from Bronze layer
 
 ## 3. Multi-Table Detection & Classification
 - Identified table title rows dynamically using regex patterns
 - Forward-filled table_name using window functions
-- Assigned every row to its correct logical table
+- Assigned every row to its correct logical table<br>
 ✔ Enabled scalable processing of multiple stacked tables within a single sheet
 
 ## 4. Hierarchical Data Normalisation
 - Forward-filled hierarchical fields (e.g. generator_type)
 - Cleaned fuel names using regex to remove notes and units
 - Removed title rows, header rows, and empty rows
-- Filtered null and invalid values
+- Filtered null and invalid values<br>
 ✔ Converted presentation-style data into structured analytical format
 
 ## 5. Silver Layer Delta Write
