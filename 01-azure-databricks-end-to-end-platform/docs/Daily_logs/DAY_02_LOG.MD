@@ -1,6 +1,6 @@
-Date: 26/12/2025
-Time Spent: 3 hours
-Day 2 - Bronze layer Implementation
+Date: 26/12/2025<br>
+Time Spent: 3 hours<br>
+Day 2 - Bronze layer Implementation<br>
 
 # ✅ Key Tasks Completed
 
@@ -28,7 +28,7 @@ df_bronze = (
     .option("header", "true")
     .option("inferSchema", "true")
     .csv(bronze_path)
-)
+)<br>
 display(df_bronze)
 
 
