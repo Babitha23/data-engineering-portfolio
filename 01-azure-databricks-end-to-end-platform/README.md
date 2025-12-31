@@ -1,6 +1,6 @@
 # UK Energy Intelligence Lakehouse Platform
 
-An end-to-end Azure-based data engineering platform that ingests, transforms, and models UK government energy datasets using a Lakehouse architecture (Bronze–Silver–Gold) for analytics and reporting.
+This repository implements an end-to-end data platform for UK energy analytics, ingesting public energy datasets and transforming them using Azure Data Factory, Azure Databricks, Delta Lake, and Synapse serverless SQL. It demonstrates batch ingestion, medallion architecture (Bronze–Silver–Gold), and scalable processing suitable for enterprise pipelines.
 
 ## Project Overview
 
@@ -47,7 +47,9 @@ The platform follows a modern Azure Lakehouse architecture:
 3. Azure Databricks performs data cleaning and standardisation (Silver)
 4. Curated fact and dimension tables are created in the Gold layer
 5. Azure Synapse Serverless enables cost-efficient SQL analytics
-6. Power BI can be connected directly to the Gold layer for reporting
+6. Power BI can be connected directly to the Gold layer for reporting<br>
+
+![Architecture Diagram](docs/ARCHITECTURE.png)
 
 ## Datasets Used
 
@@ -131,3 +133,21 @@ This design enables efficient querying and scalable analytics.
 |   ├── DATA_DICTIONARY.md
 |   ├── PROJECT_OVERVIEW.md
 └── README.md
+
+## How to Run
+
+### Prerequisites
+- Azure Subscription
+- Databricks workspace
+- Storage account with permissions
+
+### Setup
+1. Clone the repo
+2. Configure secrets in Databricks
+3. Run notebooks in order:
+   - 01_bronze_to_silver_energy_generation_trends_et5.1
+   - 02_bronze_to_silver_energy_supply_demand_trends_et5.2
+
+### Output
+- Silver tables in ADLS
+- Gold star schema in Synapse
