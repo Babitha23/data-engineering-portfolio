@@ -1,6 +1,6 @@
 Date: 29/12/2025 <br>
 Time Spent: ~4-5 hours <br>
-Day 3 - Silver Layer Completion & Portfolio Stabilisation <br>
+Day 5 - Silver Layer Completion & Portfolio Stabilisation <br>
 
 # 🎯 Objective
 

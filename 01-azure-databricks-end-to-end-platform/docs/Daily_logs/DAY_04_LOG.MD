@@ -1,6 +1,6 @@
 Date: 28/12/2025 <br>
 Time Spent: ~4-5 hours <br>
-Day 3 - Silver Layer Transformation (Energy Trends – ET 5.1) <br>
+Day 4 - Silver Layer Transformation (Energy Trends – ET 5.1) <br>
 
 # 🎯 Objective
 
