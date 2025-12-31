@@ -8,10 +8,10 @@ This document captures metadata and definitions for the datasets used in the UK 
 
 | Dataset Name | Source | Format | Update Frequency | Primary Use Case | Notes |
 |-------------|--------|--------|------------------|------------------|-------|
-| Historical Electricity Data | GOV.UK | CSV | Annual | Long-term trend analysis | Suitable for baseline metrics and historical comparisons |
+| Historical Electricity Data | GOV.UK | XLS | Annual | Long-term trend analysis | Suitable for baseline metrics and historical comparisons |
 | UK Energy Consumption (ECUK) | GOV.UK | XLS | Annual | Sector-level consumption analysis | Energy usage by domestic, industrial, transport, and services sectors |
-| ET 5.1 – Household Electricity Prices | GOV.UK | XLS | Monthly | Price trend analytics | Time-series dataset used in pricing fact tables |
-| ET 5.2 – Household Gas Prices | GOV.UK | XLS | Monthly | Comparative price analytics | Complements ET 5.1 for multi-fuel analysis |
+| ET 5.1 – Energy Generation | GOV.UK | XLS | Monthly | Price trend analytics | Time-series dataset used in pricing fact tables |
+| ET 5.2 – Energy Supply & Demand | GOV.UK | XLS | Monthly | Comparative price analytics | Complements ET 5.1 for multi-fuel analysis |
 | ET 1.1 – Indigenous Energy Production by Source | GOV.UK | XLS | Monthly | Energy production analysis | Multi-column dataset suitable for aggregation and joins |
 | ET 3.1 – Final Energy Consumption by Sector | GOV.UK | XLS | Monthly | Fact table generation | Ideal for Bronze → Silver → Gold transformation layers |
 | ET 4.1 – Electricity Supply, Demand, and Trade | GOV.UK | XLS | Monthly | Supply-demand analytics | Complex structure suitable for Spark normalization |

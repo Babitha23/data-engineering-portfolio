@@ -39,9 +39,9 @@ Transform ET 5.1 Household Electricity Trends Excel dataset from Bronze to Silve
 
 # ✅ Outcome
 - Silver Delta tables for ET 5.1:
-	- energy_prices_main
-	- energy_prices_annual
-	- energy_prices_quarterly
+	- energy_generation_trends_main
+	- energy_generation_trends_annual
+	- energy_generation_trends_quarterly
 
 # Status: 
 ✅ Completed successfully
