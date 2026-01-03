@@ -80,20 +80,21 @@ The platform follows a Medallion (Bronze–Silver–Gold) architecture.
 - Star schema modelling
 - Optimised for SQL and BI consumption
 
-[Gold Layer Design](docs/GOLD_LAYER_DESIGN.md)
+> [!IMPORTANT]
+> **[Gold Layer Design](docs/GOLD_LAYER_DESIGN.md)**
 
-### 📊 Analytics Layer (Synapse Serverless SQL)
+## 📊 Analytics Layer (Synapse Serverless SQL)
 The Analytics layer exposes curated Gold tables for reporting and business insights.
 Azure Synapse Serverless SQL is used to query the Gold layer directly without data movement, enabling cost-efficient, scalable analytics.
 
-#### 🔹 Purpose of the Analytics Layer
+### 🔹 Purpose of the Analytics Layer
 - Enable trend analysis on UK electricity generation, supply, and demand
 - Support time-series and seasonal analysis (annual & quarterly)
 - Provide BI-ready datasets for Power BI
 - Demonstrate strong SQL analytics patterns (CTEs, aggregations, percentages)
 
-#### 🧱 Gold Tables used and Business use cases
-1. fact_electricity_by_fuel: Derived from ET5.1 datasets (annual & quarterly)
+### 🧱 Gold Tables used and Business use cases
+1. **fact_electricity_by_fuel**: Derived from ET5.1 datasets (annual & quarterly)
 	- Grain: One row per fuel × generator type × metric × time period
 	- Metrics: 
 		- Fuel used in electricity generation (Mtoe)
@@ -103,16 +104,17 @@ Azure Synapse Serverless SQL is used to query the Gold layer directly without da
 		- Fuel mix analysis
 		- Renewable vs fossil fuel trends
 		- Seasonal electricity generation patterns
-	- Sample business questions answered:
-		- How has electricity generation by fuel changed over time?
-		- What are the short-term trends in electricity generation?
-		- How much of the UK’s electricity comes from renewables?
-		- What are the dominant fuel sources today?
-		- What percentage of total generation does each fuel contribute?
+> [!IMPORTANT]
+> - Sample business questions answered by **fact_electricity_by_fuel**:
+>	- How has electricity generation by fuel changed over time?
+>	- What are the short-term trends in electricity generation?
+>	- How much of the UK’s electricity comes from renewables?
+>	- What are the dominant fuel sources today?
+>	- What percentage of total generation does each fuel contribute?
 	
 **Refer here for [Sample analytics queries](synapse/sql/analytics/)**
 	
-2. fact_electricity_supply_demand: Derived from ET5.2 datasets (annual & quarterly)
+2. **fact_electricity_supply_demand**: Derived from ET5.2 datasets (annual & quarterly)
 	- Grain: One row per supply/demand component × time period
 	- Metric: 
 		- Demand or supply of Electricity (GWh)
@@ -121,17 +123,18 @@ Azure Synapse Serverless SQL is used to query the Gold layer directly without da
 		- Electricity imports and exports analysis
 		- Net electricity balance
 		- Energy security insights
-	- Sample business questions answered:
-		- How do total electricity supply and demand compare year by year?
-		- Is electricity demand increasing or decreasing over time?
-		- How do supply and demand fluctuate across quarters?
-		- How reliant is the UK on electricity imports?
-		- Does the UK produce more electricity than it consumes?
-		- Which components contribute most to electricity supply?
+> [!IMPORTANT]
+> - Sample business questions answered BY **fact_electricity_supply_demand**:
+>	- How do total electricity supply and demand compare year by year?
+>	- Is electricity demand increasing or decreasing over time?
+>	- How do supply and demand fluctuate across quarters?
+>	- How reliant is the UK on electricity imports?
+>	- Does the UK produce more electricity than it consumes?
+>	- Which components contribute most to electricity supply?
 
 **Refer here for [Sample analytics queries](synapse/sql/analytics/)**
 
-### 🧠 Modeling Approach
+## 🧠 Modeling Approach
 - Wide Excel-based time-series datasets were normalized into long-format fact tables
 - Quarterly columns were dynamically unpivoted using Spark transformations
 - Time attributes were extracted and standardized for consistent querying
@@ -146,7 +149,8 @@ Azure Synapse Serverless SQL is used to query the Gold layer directly without da
 - Azure Synapse Serverless SQL – cost-efficient analytics
 - GitHub – version control and portfolio hosting
 
-Rationale for [technology choices](docs/TECHNOLOGY_CHOICES.md)
+> [!IMPORTANT]
+> Rationale for [technology choices](docs/TECHNOLOGY_CHOICES.md)
   
 ## Key Engineering Challenges Solved
 - Ingesting Excel files with multiple logical tables per sheet
