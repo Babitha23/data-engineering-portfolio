@@ -38,6 +38,9 @@ The curated Gold layer can directly support:
 - Supply vs demand balancing
 - Long-term energy transition insights
 
+> [!Note]
+> **Please also refer this Section: [Gold Tables used and Business use cases](https://github.com/Babitha23/data-engineering-portfolio/edit/main/01-azure-databricks-end-to-end-platform/README.md#-gold-tables-used-and-business-use-cases)**
+
 ## Architecture Overview
 
 The platform follows a modern Azure Lakehouse architecture:
